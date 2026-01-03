@@ -1,0 +1,121 @@
+/* 1. Reset & Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 2. Navigasi: HAPUS SEMUA LOGIKA LAMA (left: -100%, #click, dll) */
+.nav-link:hover, 
+.nav-link.active {
+  background: #3498db;
+  color: white !important;
+  border-radius: 5px;
+}
+
+/* 3. Header Halaman */
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* 4. Rule Card (Kartu Aturan) */
+.rule-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+.rule-card h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.rule-list {
+  list-style: none; /* Hilangkan bullet point standar */
+  padding-left: 0;
+}
+
+.rule-list li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+/* Tambahkan tanda check atau poin kustom */
+.rule-list li::before {
+  content: "•";
+  color: #3498db;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* 5. Styling Tabel Tata Tertib */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* 6. Kotak Peringatan (Warning Box) */
+.warning-box {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #ffc107;
+  margin-top: 30px;
+}
+
+/* 7. Footer */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+/* 8. Responsif: Agar tabel tidak meluber di HP */
+@media (max-width: 768px) {
+  .rule-card {
+    padding: 15px;
+  }
+  
+  th, td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
