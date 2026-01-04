@@ -47,10 +47,7 @@ Layout dibangun dengan prinsip _Fluid Design_ agar kompatibel di berbagai perang
 | `detail.css`  | Media Queries             | Pengatur responsivitas elemen gambar dan deskripsi. |
 | `koleksi.html`| Hero & Card Layout        | Gerbang Informasi terkait Koleksi buku              |
 | `koleksi.css` | Media Queries             | Pengatur responsivitas elemen gambar dan deskripsi. |
-| `koleksi.js ` | Data Rendering Management | Bertanggung jawab untuk mengambil data katalog buku |
-|                                           | dari objek JavaScript dan menampilkannya secara     |
-|                                           | dinamis ke dalam elemen HTML.                       |
-| ------------- |---------------------------| ----------------------------------------------------|                       
+| `koleksi.js ` | Data Rendering Management | Bertanggung jawab untuk mengambil data katalog buku dari objek JavaScript dan menampilkannya secara dinamis ke dalam elemen HTML. |                      |                      
 
 ---
 
@@ -81,3 +78,4 @@ Layout dibangun dengan prinsip _Fluid Design_ agar kompatibel di berbagai perang
 * **[Shahan Syah Naufal]** - Lead Developer & Logic JS
 * **[Ramah Hidayah]** - UI Designer & CSS Specialist
 * **[Kesyfi anand]** - Content Writer & Documentation
+
