@@ -118,6 +118,15 @@
         background: #e7f3fe;
         color: #3498db;
       }
+/*Status bar  */
+  .status-badge.borrowed {
+  background-color: #f8d7da; /* Warna merah muda */
+  color: #721c24; /* Warna teks merah gelap */
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border-radius: 20px; /* Membuat bentuk melengkung/pill */
+  font-weight: bold;
+  }
 
       /* Footer */
       footer {
@@ -127,4 +136,5 @@
         padding: 20px;
         margin-top: 40px;
       }
+
     
