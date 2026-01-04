@@ -54,7 +54,7 @@ function sendToWhatsApp() {
 }
 
 
-// yang menggunakan 
+// yang menggunakan api offline
 
 // function sendToWhatsApp() {
 //   // 1. Ambil nilai berdasarkan ID Nim, Nama, dan Pesan
