@@ -32,10 +32,28 @@ body {
 }
 
 /* RESPONSIVE: Untuk layar HP/Tablet (Max-width 768px) */
+/* RESPONSIVE: Untuk layar HP/Tablet (Max-width 768px) */
 @media (max-width: 768px) {
   .menu-btn {
     display: block; /* Munculkan tombol hamburger */
   }
+
+  /* --- TAMBAHKAN KODE DI BAWAH INI --- */
+  .search-wrapper {
+    flex-direction: column; /* Membuat kolom kategori turun ke bawah input cari */
+    gap: 10px; /* Memberi jarak antara kedua elemen tersebut */
+  }
+
+  input[type="text"], 
+  select {
+    width: 100% !important; /* Memastikan kotak memenuhi lebar layar HP */
+    flex: none; /* Mematikan proporsi flex 3:1 dari desktop */
+  }
+
+  .search-container {
+    padding: 20px 5%; /* Mengecilkan padding agar konten lebih luas di HP */
+  }
+
 
   
 
@@ -183,3 +201,4 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
