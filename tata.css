@@ -1,4 +1,4 @@
-/* 1. Reset & Dasar */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* 2. Navigasi: HAPUS SEMUA LOGIKA LAMA (left: -100%, #click, dll) */
+
 .nav-link:hover, 
 .nav-link.active {
   background: #3498db;
@@ -59,7 +59,7 @@ body {
   position: relative;
 }
 
-/* Tambahkan tanda check atau poin kustom */
+/*  tanda check atau poin kustom */
 .rule-list li::before {
   content: "•";
   color: #3498db;
@@ -118,4 +118,5 @@ footer {
     padding: 10px;
     font-size: 0.9rem;
   }
+
 }

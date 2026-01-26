@@ -25,7 +25,6 @@ Proyek ini mengimplementasikan dua lapis metode pengiriman pesan untuk menjamin 
 
 - **Primary (Direct wa.me)**: Menggunakan enkripsi URL standar untuk pengiriman cepat tanpa watermark dan tanpa ketergantungan pada status perangkat pengirim.
 - **Secondary (Fonnte API Fallback)**: Sistem cadangan otomatis yang dipicu jika diperlukan pengiriman pesan di latar belakang (Background Process).
-- **Formatting**: Otomatisasi teks kaya (Rich Text) menggunakan simbol `*` untuk **Tebal** dan `_` untuk _Miring_ pada setiap input data NIM dan Nama.
 
 ### 📱 Responsive UI System
 
@@ -40,12 +39,15 @@ Layout dibangun dengan prinsip _Fluid Design_ agar kompatibel di berbagai perang
 ## 📂 Pemetaan Struktur File
 
 | File Name     | Spesifikasi Teknis | Fungsi Utama                                        |
-| :------------ | :----------------- | :-------------------------------------------------- |
-| `index.html`  | Hero & Card Layout | Gerbang utama informasi koleksi unggulan.           |
-| `detail.html` | Flexbox Container  | Halaman penampil sinopsis dan metadata buku.        |
-| `kontak.html` | Form Validation    | Antarmuka penginputan data NIM dan Nama.            |
-| `kontak.js`   | Event Listener API | Logika pemrosesan string menjadi URL WhatsApp.      |
-| `detail.css`  | Media Queries      | Pengatur responsivitas elemen gambar dan deskripsi. |
+| :------------ | :------------------------ | :-------------------------------------------------- |
+| `index.html`  | Hero & Card Layout        | Gerbang utama informasi koleksi unggulan.           |
+| `detail.html` | Flexbox Container         | Halaman penampil sinopsis dan metadata buku.        |
+| `kontak.html` | Form Validation           | Antarmuka penginputan data NIM dan Nama.            |
+| `kontak.js`   | Event Listener API        | Logika pemrosesan string menjadi URL WhatsApp.      |
+| `detail.css`  | Media Queries             | Pengatur responsivitas elemen gambar dan deskripsi. |
+| `koleksi.html`| Hero & Card Layout        | Gerbang Informasi terkait Koleksi buku              |
+| `koleksi.css` | Media Queries             | Pengatur responsivitas elemen gambar dan deskripsi. |
+| `koleksi.js ` | Data Rendering Management | Bertanggung jawab untuk mengambil data katalog buku dari objek JavaScript dan menampilkannya secara dinamis ke dalam elemen HTML. |                      |                      
 
 ---
 
@@ -76,3 +78,4 @@ Layout dibangun dengan prinsip _Fluid Design_ agar kompatibel di berbagai perang
 * **[Shahan Syah Naufal]** - Lead Developer & Logic JS
 * **[Ramah Hidayah]** - UI Designer & CSS Specialist
 * **[Kesyfi anand]** - Content Writer & Documentation
+
