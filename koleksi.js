@@ -1,47 +1,54 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.getElementById("searchInput");
-  const categoryFilter = document.getElementById("categoryFilter");
-  const cards = document.querySelectorAll(".card");
-
-  // Ambil elemen pesan "Tidak Ditemukan" yang akan kita buat di HTML
-  const noResults = document.getElementById("noResults");
-
-  function filterKoleksi() {
-    const keyword = searchInput.value.toLowerCase();
-    const selectedCategory = categoryFilter.value.toLowerCase();
-
-    let foundCount = 0; // Tambahkan penghitung buku yang cocok
-
-    cards.forEach((card) => {
-      const title = card.querySelector(".book-title").innerText.toLowerCase();
-      const author = card.querySelector(".author").innerText.toLowerCase();
-      const category = card.getAttribute("data-category").toLowerCase();
-
-      const matchesSearch = title.includes(keyword) || author.includes(keyword);
-      const matchesCategory =
-        selectedCategory === "semua" || category === selectedCategory;
-
-      if (matchesSearch && matchesCategory) {
-        card.style.display = "block";
-        foundCount++; // Tambah satu setiap ada buku yang cocok
-      } else {
-        card.style.display = "none";
-      }
-    });
-
-    // Cek jika tidak ada satupun buku yang ditemukan
-    // ... kode bagian atas tetap sama ...
-
-    // Cek jika tidak ada satupun buku yang ditemukan
-    if (foundCount === 0) {
-      noResults.style.display = "flex"; // UBAH ke 'flex' agar bisa ke tengah
-      document.getElementById("bookGrid").style.display = "none"; // Sembunyikan grid agar tidak memakan ruang
-    } else {
-      noResults.style.display = "none";
-      document.getElementById("bookGrid").style.display = "grid"; // Tampilkan kembali grid
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  // 1. Ambil data dari memori browser
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const userName = localStorage.getItem("userName"); // Ambil nama asli dari Google
+  if (userName) {
+    document.getElementById("userNameDisplay").innerText =
+      userName.toUpperCase();
   }
 
-  searchInput.addEventListener("input", filterKoleksi);
-  categoryFilter.addEventListener("change", filterKoleksi);
+  // 2. Hubungkan ke elemen HTML
+  const profileArea = document.getElementById("userProfile");
+  const nameDisplay = document.getElementById("userNameDisplay");
+  const logoutBtn = document.getElementById("logoutItem");
+
+  // 3. Logika Penampilan
+  if (isLoggedIn === "true" && userName) {
+    // Tampilkan profil dan tombol logout
+    profileArea.style.setProperty("display", "flex", "important");
+    logoutBtn.style.display = "block";
+
+    // Ambil nama depan (misal: "muhammad@mail.com" jadi "MUHAMMAD")
+    const namePart = userEmail.split("@")[0].toUpperCase();
+    nameDisplay.innerText = namePart;
+  } else {
+    // Jika belum login, paksa kembali ke halaman login
+    window.location.href = "server/login.html";
+  }
+});
+
+// Di file index.js (Bagian fungsi Logout)
+function logout() {
+  if (confirm("Yakin ingin keluar?")) {
+    // Jangan pakai localStorage.clear() karena akan menghapus nama selamanya
+    // Cukup hapus status loginnya saja
+    localStorage.removeItem("isLoggedIn");
+
+    alert("Anda telah keluar. Sampai jumpa kembali!");
+    window.location.href = "server/login.html";
+  }
+}
+
+// Tambahkan logika di Beranda untuk mematikan akses jika tidak login
+document.addEventListener("DOMContentLoaded", () => {
+  const status = localStorage.getItem("isLoggedIn");
+  if (status !== "true") {
+    window.location.href = "server/login.html";
+  } else {
+    const name = localStorage.getItem("userName");
+    document.getElementById("userNameDisplay").innerText = name.toUpperCase();
+    document
+      .getElementById("userProfile")
+      .style.setProperty("display", "flex", "important");
+  }
 });
